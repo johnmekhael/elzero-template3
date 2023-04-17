@@ -1,0 +1,10 @@
+body {
+  font-family: 'Cairo', sans-serif;
+}
+
+:root {
+  --main-blue: #2096f3;
+  --secondary-blue: #0078d4;
+  --main-gray: #ececec;
+  --secondary-gray: #d5d5d5;
+}
