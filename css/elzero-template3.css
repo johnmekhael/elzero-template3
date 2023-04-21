@@ -149,6 +149,35 @@ ul {
   left: 0;
 }
 
+.header .mega-menu {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  padding: 30px;
+  background-color: #fff;
+  border-bottom: 3px solid var(--main-blue);
+  z-index: 100;
+  display: flex;
+  gap: 40px;
+  top: calc(100% + 50px);
+  transition: top var(--main-transition), opacity var(--main-transition);
+  -webkit-transition: top var(--main-transition), opacity var(--main-transition);
+  -moz-transition: top var(--main-transition), opacity var(--main-transition);
+  -ms-transition: top var(--main-transition), opacity var(--main-transition);
+  -o-transition: top var(--main-transition), opacity var(--main-transition);
+
+}
+
+.header .mega-menu .links {}
+
+.header .mega-menu .links li {}
+
+.header .mega-menu .links li::before {}
+
+.header .mega-menu .image img {
+  max-width: 100%;
+}
+
 .landing {
   position: relative;
 }
