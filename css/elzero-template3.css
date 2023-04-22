@@ -16,6 +16,7 @@ body {
   --main-gray: #ececec;
   --secondary-gray: #d5d5d5;
   --main-transition: 0.3s;
+  --main-section-padding: 100px;
 }
 
 html {
@@ -61,7 +62,7 @@ ul {
 }
 
 .main-title {
-  margin: 100px auto;
+  margin: 0 auto 80px;
   border: 2px solid black;
   padding: 10px 20px;
   font-size: 30px;
@@ -491,5 +492,93 @@ ul {
     right: 0;
     width: 52%;
     height: 102%;
+  }
+}
+
+.article {
+  padding-top: var(--main-section-padding);
+  padding-bottom: var(--main-section-padding);
+  position: relative;
+}
+
+.article .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 40px;
+}
+
+.article .box {
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.25);
+  background-color: #fff;
+  overflow: hidden;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  transition: transform var(--main-transition), box-shadow var(--main-transition);
+  -webkit-transition: transform var(--main-transition), box-shadow var(--main-transition);
+  -moz-transition: transform var(--main-transition), box-shadow var(--main-transition);
+  -ms-transition: transform var(--main-transition), box-shadow var(--main-transition);
+  -o-transition: transform var(--main-transition), box-shadow var(--main-transition);
+}
+
+.article .box:hover {
+  transform: translateY(-10px);
+  -webkit-transform: translateY(-10px);
+  -moz-transform: translateY(-10px);
+  -ms-transform: translateY(-10px);
+  -o-transform: translateY(-10px);
+  box-shadow: 0 2px 25px rgba(0, 0, 0, 0.35);
+}
+
+.article .box img {
+  max-width: 100%;
+}
+
+.article .box .content {
+  padding: 20px;
+}
+
+.article .box .content h3 {
+  margin: 0;
+}
+
+.article .box .content p {
+  margin: 10px 0 0;
+  color: #777;
+  line-height: 1.5;
+}
+
+.article .box .info {
+  padding: 20px;
+  border-top: 2px solid #e6e6e7;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.article .box .info a {
+  font-weight: bold;
+  color: var(--main-blue);
+}
+
+.article .box .info i {
+  font-weight: bold;
+  color: var(--main-blue);
+}
+
+.article .box:hover .info i {
+  animation: moving-arrow 0.6s linear infinite;
+  -webkit-animation: moving-arrow 0.6s linear infinite;
+}
+
+@keyframes moving-arrow {
+  100% {
+    transform: translateX(10px);
+    -webkit-transform: translateX(10px);
+    -moz-transform: translateX(10px);
+    -ms-transform: translateX(10px);
+    -o-transform: translateX(10px);
   }
 }
