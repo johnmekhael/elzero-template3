@@ -78,7 +78,7 @@ ul {
 .main-title:hover {
   color: #fff;
   border: 2px solid #fff;
-  transition-delay: 2s;
+  transition-delay: 1s;
 }
 
 .main-title::before {
@@ -124,13 +124,13 @@ ul {
 .main-title:hover::before {
   z-index: -1;
   animation: l-move 2s linear forwards;
-  -webkit-animation: l-move 2s linear forwards;
+  -webkit-animation: l-move 1s linear forwards;
 }
 
 .main-title:hover::after {
   z-index: -1;
   animation: r-move 2s linear forwards;
-  -webkit-animation: r-move 2s linear forwards;
+  -webkit-animation: r-move 1s linear forwards;
 }
 
 .header {
