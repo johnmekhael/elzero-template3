@@ -814,3 +814,62 @@ ul {
   background-position: left bottom;
   color: #fff;
 }
+
+.testimonials {
+  padding-top: var(--main-section-padding);
+  padding-bottom: var(--main-section-padding);
+  position: relative;
+  background-color: var(--main-gray);
+}
+
+.testimonials .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 40px;
+}
+
+.testimonials .box {
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgb(0 0 0 / 30%);
+  position: relative;
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+}
+
+.testimonials .box img {
+  position: absolute;
+  right: -10px;
+  top: -30px;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border: 10px solid var(--main-gray);
+}
+
+.testimonials .box h3 {
+  margin: 0 0 10px;
+}
+
+.testimonials .box .title {
+  color: var(--main-blue);
+  display: block;
+  margin-bottom: 10px;
+}
+
+.testimonials .box .rate .filled {
+  color: #ffc107;
+}
+
+.testimonials .box p {
+  line-height: 1.6;
+  color: #777;
+  margin-bottom: 0;
+}
