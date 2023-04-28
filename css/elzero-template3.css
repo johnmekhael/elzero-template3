@@ -999,3 +999,120 @@ ul {
   margin-top: 10px;
   margin-bottom: 30px;
 }
+
+.services {
+  padding-top: var(--main-section-padding);
+  padding-bottom: var(--main-section-padding);
+  position: relative;
+  background-color: var(--main-gray);
+}
+
+.services .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 40px;
+}
+
+.services .box {
+  background-color: #fff;
+  box-shadow: 15px 15px 20px 0px rgb(0 0 0 / 13%), 0 2px 4px 0 rgb(0 0 0 / 12%);
+  counter-increment: services;
+  transition: var(--main-transition);
+  -webkit-transition: var(--main-transition);
+  -moz-transition: var(--main-transition);
+  -ms-transition: var(--main-transition);
+  -o-transition: var(--main-transition);
+  position: relative;
+}
+
+.services .box::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 5px;
+  top: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--main-blue);
+  transition: var(--main-transition);
+  -webkit-transition: var(--main-transition);
+  -moz-transition: var(--main-transition);
+  -ms-transition: var(--main-transition);
+  -o-transition: var(--main-transition);
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+}
+
+.services .box:hover {
+  transform: translateY(-10px);
+  -webkit-transform: translateY(-10px);
+  -moz-transform: translateY(-10px);
+  -ms-transform: translateY(-10px);
+  -o-transform: translateY(-10px);
+}
+
+.services .box:hover::before {
+  width: 100%;
+}
+
+.services .box i {
+  color: #d5d5d5;
+  display: block;
+  text-align: center;
+  margin: 40px auto 10px;
+}
+
+.services .box h3 {
+  text-align: center;
+  font-size: 28px;
+  color: var(--main-blue);
+  margin: 10px 0 60px;
+}
+
+.services .box .info {
+  padding: 15px;
+  position: relative;
+  background-color: #f7f7f7;
+  text-align: right;
+  overflow: hidden;
+}
+
+.services .box .info::before {
+  content: "0" counter(services);
+  color: #fff;
+  font-size: 30px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-right: 15px;
+  position: absolute;
+  height: 100%;
+  width: 100px;
+  top: 0;
+  left: 0px;
+  background-color: var(--main-blue);
+
+}
+
+.services .box .info::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 100px;
+  height: 100%;
+  width: 50px;
+  background-color: var(--secondary-gray);
+  transform: skewX(-30deg);
+  -webkit-transform: skewX(-30deg);
+  -moz-transform: skewX(-30deg);
+  -ms-transform: skewX(-30deg);
+  -o-transform: skewX(-30deg);
+}
+
+.services .box .info a {
+  color: var(--main-blue);
+  font-weight: bold;
+}
