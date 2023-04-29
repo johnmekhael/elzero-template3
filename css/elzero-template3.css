@@ -1116,3 +1116,62 @@ ul {
   color: var(--main-blue);
   font-weight: bold;
 }
+
+.our-skills {
+  padding-top: var(--main-section-padding);
+  padding-bottom: var(--main-section-padding);
+  position: relative;
+}
+
+.our-skills .container {
+  display: flex;
+  align-items: center;
+}
+
+.our-skills img {
+  max-width: 50%;
+}
+
+@media (max-width: 991px) {
+  .our-skills img {
+    display: none;
+  }
+}
+
+.our-skills .skills {
+  flex: 1;
+}
+
+.our-skills .skills .skill {}
+
+.our-skills .skills .skill h3 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.our-skills .skills .skill h3 span {
+  font-size: 12px;
+  border: 3px solid #ccc;
+  padding: 3px;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  color: var(--main-blue);
+}
+
+.our-skills .skills .skill .the-progress {
+  height: 25px;
+  background-color: #eee;
+  position: relative;
+}
+
+.our-skills .skills .skill .the-progress span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background-color: var(--main-blue);
+}
