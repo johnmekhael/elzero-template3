@@ -1441,3 +1441,166 @@ ul {
 .events .subscribe form input[type="submit"]:hover {
   background-color: var(--secondary-blue);
 }
+
+.pricing {
+  padding-top: var(--main-section-padding);
+  padding-bottom: var(--main-section-padding);
+  position: relative;
+  background-color: var(--main-gray);
+}
+
+.pricing .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 40px;
+}
+
+.pricing .box {
+  position: relative;
+  box-shadow: 0 12px 20px 0 rgb(0 0 0 / 13%), 0 2px 4px 0 rgb(0 0 0 / 12%);
+  transition: var(--main-transition);
+  -webkit-transition: var(--main-transition);
+  -moz-transition: var(--main-transition);
+  -ms-transition: var(--main-transition);
+  -o-transition: var(--main-transition);
+  background-color: #fff;
+  text-align: center;
+  z-index: 1;
+}
+
+.pricing .box::before,
+.pricing .box::after {
+  content: "";
+  width: 0;
+  height: 50%;
+  position: absolute;
+  background-color: var(--main-gray);
+  z-index: -1;
+  transition: var(--main-transition);
+  -webkit-transition: var(--main-transition);
+  -moz-transition: var(--main-transition);
+  -ms-transition: var(--main-transition);
+  -o-transition: var(--main-transition);
+}
+
+.pricing .box::before {
+  top: 0;
+  left: 0;
+}
+
+.pricing .box::after {
+  bottom: 0;
+  right: 0;
+}
+
+.pricing .box:hover::after,
+.pricing .box:hover::before {
+  width: 100%;
+}
+
+@media (min-width: 1200px) {
+  .pricing .box.popular {
+    top: -20px;
+  }
+}
+
+.pricing .box.popular .label {
+  position: absolute;
+  writing-mode: vertical-rl;
+  -webkit-writing-mode: vertical-rl;
+  -ms-writing-mode: vertical-rl;
+  background-color: var(--main-blue);
+  color: #fff;
+  font-weight: bold;
+  padding: 10px 10px 35px 10px;
+  font-size: 18px;
+  right: 15px;
+  width: 40px;
+}
+
+.pricing .box.popular .label::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  border-style: solid;
+  border-color: transparent transparent #fff transparent;
+  border-width: 20px;
+}
+
+.pricing .box .title {
+  font-weight: bold;
+  margin: 30px 0;
+  font-size: 25px;
+  letter-spacing: -1px;
+}
+
+.pricing .box img {
+  width: 100px;
+  margin-bottom: 30px;
+}
+
+.pricing .box .price {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.pricing .box .amount {
+  display: block;
+  font-size: 60px;
+  font-weight: bold;
+  color: var(--main-blue);
+  margin-bottom: 10px;
+}
+
+.pricing .box .time {
+  display: block;
+  color: #777;
+  margin-bottom: 20px;
+  font-size: 22px;
+}
+
+.pricing .box ul {
+  text-align: left;
+}
+
+.pricing .box ul li {
+  padding: 20px;
+  border-top: 1px solid #ddd;
+}
+
+.pricing .box ul li i {
+  color: var(--main-blue);
+  font-size: 40px;
+  font-weight: 900;
+  margin-right: 20px;
+}
+
+.pricing .box a {
+  display: block;
+  width: fit-content;
+  margin: 10px auto 30px;
+  padding: 20px 30px;
+  color: var(--main-blue);
+  font-size: 18px;
+  font-weight: bold;
+  border: 3px solid var(--main-blue);
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  transition: var(--main-transition);
+  -webkit-transition: var(--main-transition);
+  -moz-transition: var(--main-transition);
+  -ms-transition: var(--main-transition);
+  -o-transition: var(--main-transition);
+}
+
+.pricing .box a:hover {
+  color: #fff;
+  background-color: var(--secondary-blue);
+  border-color: var(--secondary-blue);
+}
