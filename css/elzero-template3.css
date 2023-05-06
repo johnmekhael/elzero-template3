@@ -1699,6 +1699,12 @@ ul {
   min-height: 300px;
 }
 
+@media(max-width:767px) {
+  .stats {
+    background-image: none;
+  }
+}
+
 .stats::before {
   content: "";
   position: absolute;
